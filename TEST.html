@@ -630,13 +630,15 @@ Setting.addToggle("achievements", {
 &lt;&lt;set $humor=0&gt;&gt;
 &lt;&lt;set $courage=0&gt;&gt;
 &lt;&lt;set $confidence=0&gt;&gt;
-&lt;&lt;set $skill=&quot;&quot;&gt;&gt;
 &lt;&lt;set $logical=0&gt;&gt;
 &lt;&lt;set $kind=0&gt;&gt;
 
 &lt;&lt;set $eyecolor=&quot;&quot;&gt;&gt;
 
+&lt;&lt;set $skill=&quot;&quot;&gt;&gt;
 &lt;&lt;set $motiv=0&gt;&gt;
+&lt;&lt;set $letter=false&gt;&gt;
+&lt;&lt;set $box=false&gt;&gt;
 
 
 &lt;!-- MAYBE ELIMINATE --&gt;
@@ -1408,14 +1410,78 @@ Your sister turns to...
 Your sister turns away from the window and approaches you to...
 
 &lt;&lt;include [[3-2]]&gt;&gt;</tw-passagedata><tw-passagedata pid="138" name="3-2" tags="draft" position="2100,475" size="100,100">&lt;div class=&quot;choice&quot;&gt;[[...take your hands.|3-3][$sabine.touch=true]]&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;[[...look at you.|3-3][$sabine.touch=false]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="139" name="3-3" tags="" position="2100,575" size="100,100">Sabine&lt;&lt;if $sabine.touch&gt;&gt; takes your hands and&lt;&lt;else&gt;&gt; looks at you anxiously. &quot;If you want to run, you know we&#39;ll help you, right? We have contacts. They can even get you out of the country if you need it.&quot; Coming from anyone else, it might sound like a joke, but from your sister, it probably isn&#39;t. She and her husband have a number of unusual connections, and someone who could smuggle you away to somewhere remote wouldn&#39;t be out of place.
+&lt;div class=&quot;choice&quot;&gt;[[...look at you.|3-3][$sabine.touch=false]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="139" name="3-3" tags="draft majorVarSet" position="2100,575" size="100,100">Sabine&lt;&lt;if $sabine.touch&gt;&gt; takes your hands and&lt;&lt;else&gt;&gt; looks at you anxiously. &quot;If you want to run, you know we&#39;ll help you, right? We have contacts. They can even get you out of the country if you need it.&quot; Coming from anyone else, it might sound like a joke, but from your sister, it probably isn&#39;t. She and her husband have a number of unusual connections, and someone who could smuggle you away to somewhere remote wouldn&#39;t be out of place.
 
 But in the month since you agreed to this plan, you&#39;ve become more convinced that this is your way forward. You have to do this...
 
 &lt;div class=&quot;choice&quot;&gt;[[...for your family.|3-3.1]]&lt;/div&gt;
 &lt;div class=&quot;choice&quot;&gt;[[...for the kingdom.|3-3.2]]&lt;/div&gt;
 &lt;div class=&quot;choice&quot;&gt;[[...for yourself.|3-3.3]]&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="140" name="3-3.1" tags="draft" position="2000,700" size="100,100">&lt;&lt;set $motiv=2&gt;&gt;You have to do this for your family. Not only would completing your mission improve your family&#39;s standing, it might bring your brother and father home, too. &lt;&lt;include [[3-4]]&gt;&gt;</tw-passagedata><tw-passagedata pid="141" name="3-3.2" tags="draft" position="2100,700" size="100,100">&lt;&lt;set $motiv=1&gt;&gt;You have to do this for the kingdom. Your father and brother are fighting for king and country, and you&#39;ll do your share, too. &lt;&lt;include [[3-4]]&gt;&gt;</tw-passagedata><tw-passagedata pid="142" name="3-3.3" tags="draft" position="2200,700" size="100,100">&lt;&lt;set $motiv=-1&gt;&gt;You have to do this for yourself. You&#39;ll be free of your family&#39;s meddling for a time, and &lt;&lt;if $confidence&gt;0&gt;&gt;when&lt;&lt;else&gt;&gt;if&lt;&lt;/if&gt;&gt; you succeed in your mission, you&#39;ll have surely have power of your own. &lt;&lt;include [[3-4]]&gt;&gt;</tw-passagedata><tw-passagedata pid="143" name="3-4" tags="" position="2100,825" size="100,100">You have to see this through.
+</tw-passagedata><tw-passagedata pid="140" name="3-3.1" tags="draft" position="2000,700" size="100,100">&lt;&lt;set $motiv=2&gt;&gt;You have to do this for your family. Not only would completing your mission improve your family&#39;s standing, it might bring your brother and father home, too. &lt;&lt;include [[3-4]]&gt;&gt;</tw-passagedata><tw-passagedata pid="141" name="3-3.2" tags="draft" position="2100,700" size="100,100">&lt;&lt;set $motiv=1&gt;&gt;You have to do this for the kingdom. Your father and brother are fighting for king and country, and you&#39;ll do your share, too. &lt;&lt;include [[3-4]]&gt;&gt;</tw-passagedata><tw-passagedata pid="142" name="3-3.3" tags="draft" position="2200,700" size="100,100">&lt;&lt;set $motiv=-1&gt;&gt;You have to do this for yourself. You&#39;ll be free of your family&#39;s meddling for a time, and &lt;&lt;if $confidence&gt;0&gt;&gt;when&lt;&lt;else&gt;&gt;if&lt;&lt;/if&gt;&gt; you succeed in your mission, you&#39;ll have surely have power of your own. &lt;&lt;include [[3-4]]&gt;&gt;</tw-passagedata><tw-passagedata pid="143" name="3-4" tags="draft genderstuff" position="2100,825" size="100,100">You have to see this through. But before you can say as much, someone knocks frantically on the door. Sabine&#39;s brow furrows, and she &lt;&lt;if $sabine.touch&gt;&gt;releases your hands before rising&lt;&lt;else&gt;&gt;rises&lt;&lt;/if&gt;&gt; to answer the door. She opens it to reveal a very nervous-looking member of the pavillion&#39;s staff.
+
+&quot;Ma&#39;am, the &lt;&lt;if $ax.they==&quot;she&quot;&gt;&gt;groom&lt;&lt;else&gt;&gt;bride&lt;&lt;/if&gt;&gt; is here. Said I needed to bring this,&quot; she lifts a broad, flat box made of dark wood, &quot;to the &lt;&lt;if $ax.they==&quot;she&quot;&gt;&gt;bride&lt;&lt;else&gt;&gt;groom&lt;&lt;/if&gt;&gt;.&quot;
+
+&quot;What is it?&quot; Sabine asks suspiciously.
+
+&quot;Don&#39;t know, Ma&#39;am. There&#39;s a letter inside, and a gift, &lt;&lt;if $ax.they==&quot;she&quot;&gt;&gt;he&lt;&lt;else&gt;&gt;she&lt;&lt;/if&gt;&gt; said.&quot;
+
+Your sister forces a smile and takes the box from the young woman. &quot;Thank you.&quot;
+
+&quot;My pleasure, Ma&#39;am.&quot; She gives a quick bow before hurrying away.
+
+After closing the door, Sabine returns to you and holds out the box. &quot;What do you think? Shall we open it?&quot; You recognize the glitter in her eyes: enthusiasm reserved for ideas that are terrible but very exciting.
+
+&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;Absolutely not.\&quot;&quot;|3-4.1]]&lt;/div&gt;
+&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;Only if you open it.\&quot;&quot;|3-4.2]]&lt;/div&gt;
+&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;I suppose we have to.\&quot;&quot;|3-4.3]]&lt;/div&gt;
+&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;Of course!\&quot;&quot;|3-4.4]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="144" name="3-5" tags="draft" position="2150,1075" size="100,100">As soon as the box is open, a breeze rushes out from inside, raising a folded piece of paper into the air. A chill bursts up your spine. Sorcery. Real, working sorcery.
+
+&quot;Shit.&quot; Sabine nods toward the paper. &quot;I think that&#39;s yours.&quot;
+
+You&lt;&lt;if $courage&lt;0&gt;&gt; cautiously&lt;&lt;/if&gt;&gt; reach into the still-blowing wind and take the letter. As soon as you take hold of it, the box shuts of its own accord. There&#39;s no envelope, seal, or written name—just a piece of paper folded precisely in half.
+
+&quot;Well? Go on. Read it! I promise I won&#39;t look at it unless you want me to.&quot; That&#39;s almost certainly a lie, and the way she&#39;s studiously looking anywhere but at the letter only makes her seem more suspicous.
+
+You angle yourself away from her and unfold the letter.
+
+&lt;&lt;include [[3-6]]&gt;&gt;</tw-passagedata><tw-passagedata pid="145" name="3-4.1" tags="" position="1950,950" size="100,100">&lt;&lt;set $courage-=2&gt;&gt;&quot;Absolutely not. Who knows what&#39;s in there?&quot;
+
+Sabine clicks her tongue in disappointment. &quot;Spoilsport. But look at this carving!&quot; She holds the box up to show you the lid, held closed by a small copper clasp. You squint at it in the darkness for a few seconds before your sister notices. &quot;Oh, light, yes.&quot; Placing the box in your hands, she gets up to light a couple lamps to make up for the oppressive stormy darkness that&#39;s come over the room. In the dim glow, you can make out a scene carved into the box lid: a bird of prey diving toward a coiled snake. Every scale and feather is carved in painstaking detail, and the copper corners and clasp were formed to evoke raptor talons.
+
+&quot;A bit grisly for a wedding gift.&quot; Sabine inspects it over your shoulder. &quot;But it&#39;s beautifully made.&quot;
+
+&lt;div class=&quot;choice&quot;&gt;[[Next|done]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="146" name="3-4.2" tags="draft" position="2050,950" size="100,100">&lt;&lt;set $courage-=1&gt;&gt;&quot;Only if you open it. Who knows what&#39;s in there?&quot;
+
+&quot;Very well, I&#39;ll risk my life for your wedding gift.&quot; She squints at the box for a moment before she realizes how dark it&#39;s become. &quot;Oh, light, yes.&quot; Placing the box in your hands, she gets up to light a couple lamps to make up for the oppressive stormy darkness that&#39;s come over the room. Then, she sits back down beside you and takes the box back. &quot;Ready?&quot; You nod, and she flicks back the talon-shaped clasp and opens the lid.
+
+&lt;&lt;include [[3-5]]&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="3-4.3" tags="draft" position="2150,950" size="100,100">&lt;&lt;set $courage+=1&gt;&gt;You sigh. &quot;I suppose we have to.&quot;
+
+&quot;Such enthusiasm!&quot; She hands you the box, and you squint at it in the darkness for a few seconds before your sister notices. &quot;Oh, light, yes.&quot; She gets up to light a couple lamps to make up for the oppressive stormy darkness that&#39;s come over the room. Then, she sits back down beside you and nods at you. You lift the talon-shaped clasp and carefully raise the lid.
+
+&lt;&lt;include [[3-5]]&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="3-4.4" tags="draft" position="2250,950" size="100,100">&lt;&lt;set $courage+=1&gt;&gt;&quot;Of course!&quot;
+
+&quot;Then what are we waiting for?&quot; She hands you the box, and you squint at it in the darkness for a few seconds before your sister notices. &quot;Oh, light, yes.&quot; She gets up to light a couple lamps to make up for the oppressive stormy darkness that&#39;s come over the room. Then, she sits back down beside you and nods at you. You lift the talon-shaped clasp and raise the lid.
+
+&lt;&lt;include [[3-5]]&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="3-6" tags="draft" position="2150,1175" size="100,100">&lt;&lt;set $letter=true&gt;&gt;The first thing that strikes you is the handwriting. It could generously be described as unornamented and ungenerously as loosely legible scrawl. There is no salutation; the letter begins with just a singular block of words crowded up to the top of the page:
+
+&lt;i&gt;I&#39;ve been told I will not see you until the ceremony. I have doubts this will make it to you, but I apparently have no choice in the matter. I understand your family is of meager means, so I&#39;ve brought something to lessen the burden. Wear it if it suits you.&lt;/i&gt;
+
+No closing follows the body of the letter, only what appears to be a name: Hawk.
+
+You look up from the letter to see your sister staring at it, mouth agape. &quot;I&#39;m not sure if this is a gift or an insult. You absolutely cannot show that letter to Mother.&quot;
+
+You open the box and...
+
+&lt;div class=&quot;choice&quot;&gt;[[...throw the letter inside before shutting it. You don&#39;t want this &quot;gift.&quot;|3-6.1]]&lt;/div&gt;
+&lt;div class=&quot;choice&quot;&gt;[[...see what the &quot;gift&quot; is.|3-6.2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="150" name="3-6.2" tags="draft" position="2200,1300" size="100,100">&lt;&lt;set $box=true&gt;&gt;You open the box and peer into it to see what the &quot;gift&quot; is. The outside of the box is only a few inches deep, but now that you&#39;re able to look inside unimpeded, you realize that you not only can&#39;t see its contents—you can&#39;t see the bottom either. As you try to comprehend the presence of the small chasm before you, you hear the fluttering of fabric approaching from below. Finally, a mass of blue bobs to the top of the box like driftwood floating over the waves. It takes some effort to pull it out due to its weight and length, and as you lay it out on a table, Sabine gasps.
+
+The garment before you is neither a dress nor a suit but a long, sky blue silk brocade robe with silver cloud-like whorls. Its high, open collar is ornamented with tiny white jewels that drip down over the long, slate blue velvet sleeves and cape that cascade from underneath the garment&#39;s shoulders. A sash of silver silk wraps around the waist of the robe and ends in a series of small tassels.
+
+This would be an appropriate gift for the king himself, so valuable that you probably couldn&#39;t even sell it. When it comes to the opulence of a wedding, it can be a fine line between impressing one&#39;s guests and immodestly flaunting one&#39;s means. This is far, &lt;i&gt;far&lt;/i&gt; past that line.
+
+&lt;div class=&quot;choice&quot;&gt;[[Next|done]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="151" name="3-6.1" tags="draft" position="2100,1300" size="100,100">You open the box and throw the letter inside before shutting it. You don&#39;t want this &quot;gift.&quot;
+
+&quot;You can still make a run for it. I can—
 
 &lt;div class=&quot;choice&quot;&gt;[[Next|done]]&lt;/div&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
