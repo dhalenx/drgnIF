@@ -1731,7 +1731,7 @@ As the guests rise and begin talking among themselves, the priestess speaks just
 
 The priestess nods and leads you away from the pavillion and back to the arched pathways through which you entered. The waiting room was close to the pavillion itself, but the whole of the pavillion complex is vast and labyrinthine. Though you have many relatives who likely used the very same sitting room, the winding paths the priestess takes you through instill confidence that no one will disturb you: they&#39;d never be able to find it again. You pass a dozen little courtyards—each adorned with different flowers, trees, fountains, and sculpture—until your perception shifts to understanding the courtyards as the true essential component of the complex. The enclosed rooms are only a coincidental, structural feature.
 
-&lt;div class=&quot;choice&quot;&gt;[[Next|5-0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="191" name="5-0" tags="draft" position="3200,100" size="100,100">The room she finally stops at is positioned between one courtyard featuring an ornamental tree whose large leaves bounce with each raindrop and one centered on a sculpture of a winged stag whose antlers twist and spiral—a depiction of the West Wind. Inside the sitting room are two loveseats and a low table set with a pitcher of water and two goblets. Unlike the glass-paned windows elsewhere, the windows of this room are open to the courtyards on either side, and though there are lamps inside, the sky is light enough that you won&#39;t need them.
+&lt;div class=&quot;choice&quot;&gt;[[Next|5-0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="191" name="5-0" tags="draft startscene" position="3200,100" size="100,100">The room she finally stops at is positioned between one courtyard featuring an ornamental tree whose large leaves bounce with each raindrop and one centered on a sculpture of a winged stag whose antlers twist and spiral—a depiction of the West Wind. Inside the sitting room are two loveseats and a low table set with a pitcher of water and two goblets. Unlike the glass-paned windows elsewhere, the windows of this room are open to the courtyards on either side, and though there are lamps inside, the sky is light enough that you won&#39;t need them.
 
 &quot;I will knock when it is time for the feast. If you are finished sooner, I will be nearby—you need only call for me.&quot; The priestess gives you a significant look. Though she&#39;s maintained a calm air despite the Elf&#39;s presence, she knows what they are—if you, specifically, are finished sooner, she will hear.
 
@@ -1763,7 +1763,7 @@ If your intent was to visibly rile $ha.them, it doesn&#39;t seem to have worked.
 
 &lt;&lt;include [[5-1a]]&gt;&gt;</tw-passagedata><tw-passagedata pid="196" name="5-1.4" tags="draft" position="3325,325" size="100,100">&lt;&lt;set $curiosity-=2&gt;&gt;&quot;No questions.&quot;
 
-&lt;&lt;include [[5-1noq]]&gt;&gt;</tw-passagedata><tw-passagedata pid="197" name="5-1.5" tags="draft startscene" position="3450,325" size="100,100">You remain silent, but unlike your mother, $ha.they do&lt;&lt;hes&gt;&gt;n&#39;t seem to take that as agreement with $ha.their preference.
+&lt;&lt;include [[5-1noq]]&gt;&gt;</tw-passagedata><tw-passagedata pid="197" name="5-1.5" tags="draft" position="3450,325" size="100,100">You remain silent, but unlike your mother, $ha.they do&lt;&lt;hes&gt;&gt;n&#39;t seem to take that as agreement with $ha.their preference.
 
 &quot;Well?&quot; When $ha.their sharp question doesn&#39;t immediately prompt a response, $ha.they let&lt;&lt;hs&gt;&gt; out a breath, too long and slow to be a sigh. The barbed edges of $ha.their presence don&#39;t soften, but they do withdraw to a less threatening distance. &quot;You must be curious. Ask, if you wish.&quot;
 
@@ -1855,7 +1855,7 @@ Hawk nods, and $ha.their tightly wound demeanor seems to loosen slightly&lt;&lt;
 
 &quot;Yes. This is an obligation for both of us. I won&#39;t interfere in your life, and I expect you not to interfere in mine.&quot;
 
-&lt;&lt;include [[5-1q]]&gt;&gt;</tw-passagedata><tw-passagedata pid="212" name="5-1haq" tags="draft" position="3125,1200" size="100,100">&lt;&lt;if not $fivea.start&gt;&gt;&quot;Then I have questions for you&lt;&lt;if $fiveq.start&gt;&gt;, too&lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;&quot;Then I have just &lt;&lt;if $fivea.gen&gt;&gt;one question&lt;&lt;else&gt;&gt;two questions&lt;&lt;/if&gt;&gt; for you&lt;&lt;/if&gt;&gt;: &lt;&lt;if fivea.gen&gt;&gt;&lt;&lt;include [[5-1haq.name]]&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;include [[5-1haq.gen]]&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="213" name="5-1a.gent" tags="draft genderstuff" position="3400,700" size="100,100">&lt;&lt;set $fivea.gen=true&gt;&gt;&lt;&lt;set $fivea.count+=1&gt;&gt;&lt;&lt;set $ha.knowtrans=true&gt;&gt;&quot;I&#39;m not a $ax.person.&quot;
+&lt;&lt;include [[5-1q]]&gt;&gt;</tw-passagedata><tw-passagedata pid="212" name="5-1haq" tags="draft" position="3125,1200" size="100,100">&lt;&lt;if not $fivea.start&gt;&gt;&quot;Then I have questions for you&lt;&lt;if $fiveq.start&gt;&gt;, too&lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;&quot;Then I have just &lt;&lt;if $fivea.gen&gt;&gt;one question&lt;&lt;else&gt;&gt;two questions&lt;&lt;/if&gt;&gt; for you&lt;&lt;/if&gt;&gt;: &lt;&lt;if $fivea.gen&gt;&gt;&lt;&lt;include [[5-1haq.name]]&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;include [[5-1haq.gen]]&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="213" name="5-1a.gent" tags="draft genderstuff" position="3400,700" size="100,100">&lt;&lt;set $fivea.gen=true&gt;&gt;&lt;&lt;set $fivea.count+=1&gt;&gt;&lt;&lt;set $ha.knowtrans=true&gt;&gt;&quot;I&#39;m not a $ax.person.&quot;
 
 &quot;I see. What should I call you?&quot; $ha.they ask, as if this were a perfectly normal thing to inquire about.
 
@@ -1930,9 +1930,9 @@ The temperature of the room drops. &quot;Who forced you into this?&quot; $ha.The
 
 That&#39;s not going to do you any good.
 
-&lt;div class=&quot;choice&gt;[[&quot;\&quot;No, it&#39;s not like that.\&quot;&quot;|5-1a.marr.1]]&lt;/div&gt;
-&lt;div class=&quot;choice&gt;[[&quot;\&quot;Don&#39;t!\&quot;&quot;|5-1a.marr.2]]&lt;/div&gt;
-&lt;div class=&quot;choice&gt;[[Freeze up. You don&#39;t handle others&#39; anger well.|5-1a.marr.3]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="226" name="5-1a.marr.1" tags="draft" position="3925,825" size="100,100">&quot;No, it&#39;s not like that,&quot; you say quickly, before $ha.they can make it out the door.
+&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;No, it&#39;s not like that.\&quot;&quot;|5-1a.marr.1]]&lt;/div&gt;
+&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;Don&#39;t!\&quot;&quot;|5-1a.marr.2]]&lt;/div&gt;
+&lt;div class=&quot;choice&quot;&gt;[[Freeze up. You don&#39;t handle others&#39; anger well.|5-1a.marr.3]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="226" name="5-1a.marr.1" tags="draft" position="3925,825" size="100,100">&quot;No, it&#39;s not like that,&quot; you say quickly, before $ha.they can make it out the door.
 
 $ha.They turn&lt;&lt;hs&gt;&gt; back around toward you. &quot;Explain.&quot;
 
