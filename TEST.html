@@ -1748,7 +1748,7 @@ Once they&#39;re finished, you take Hawk&#39;s cuff and turn toward them. After 
 
 You&#39;re painfully aware of their unnatural stillness as you &lt;&lt;if $touch&gt;&gt;carefully&lt;&lt;else&gt;&gt;reluctantly&lt;&lt;/if&gt;&gt; work the cuff into place. When you finish and pull your hands back, they suddenly turn toward you—far, &lt;i&gt;far&lt;/i&gt; too close. You can see each of their long, dark eyelashes as they finally blink for the first time. They take a step away from you, taking the scent of pine and herbs with them.
 
-&lt;div class=&quot;choice&quot;&gt;[[Next|4-10]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="189" name="TO DO" tags="todo" position="4775,25" size="100,100">ISLA VISIT PROMISE
+&lt;div class=&quot;choice&quot;&gt;[[Next|4-10]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="189" name="TO DO" tags="todo" position="5225,50" size="100,100">ISLA VISIT PROMISE
 
 TRACK HAWK SILENT RESPONSES?
 
@@ -1756,7 +1756,9 @@ OPTIONS FOR AGGRESSIVELY POLITE MC?
 
 THX FOR ROBE
 
-I CREI</tw-passagedata><tw-passagedata pid="190" name="4-10" tags="draft endscene" position="2500,1550" size="100,100">&quot;You are now husband and wife!&quot; the priestess declares, and the crowd applauds as they&#39;re supposed to. &quot;Brethren, let us go and be merry as one family.&quot; The words don&#39;t convey the same heartwarming sentiment with not a single guest from Hawk&#39;s side. &quot;The weather is clearing, so we will gather outside shortly.&quot;
+I CREI
+
+GET STUFF FOR TELEPORT</tw-passagedata><tw-passagedata pid="190" name="4-10" tags="draft endscene" position="2500,1550" size="100,100">&quot;You are now husband and wife!&quot; the priestess declares, and the crowd applauds as they&#39;re supposed to. &quot;Brethren, let us go and be merry as one family.&quot; The words don&#39;t convey the same heartwarming sentiment with not a single guest from Hawk&#39;s side. &quot;The weather is clearing, so we will gather outside shortly.&quot;
 
 As the guests rise and begin talking among themselves, the priestess speaks just loudly enough to be heard by you and Hawk. &quot;We have a sitting room where you will not be disturbed by any in attendance until the feast. Would you like to make use of it?&quot;
 
@@ -1823,9 +1825,9 @@ If your intent was to visibly rile $ha.them, it doesn&#39;t seem to have worked.
 &lt;&lt;/if&gt;&gt;&lt;&lt;if $gendervibes==&quot;trans&quot;&gt;&gt;&lt;&lt;if not $fivea.gen&gt;&gt;&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;I&#39;m not a &quot;+$ax.person+&quot;.\&quot;&quot;|5-1a.gent]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $gendervibes==&quot;maybe&quot;&gt;&gt;&lt;&lt;if not $fivea.gen&gt;&gt;&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;I&#39;m not sure if I&#39;m a &quot;+$ax.person+&quot;.\&quot;&quot;|5-1a.genm]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if not $fivea.marr&gt;&gt;&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;This marriage wasn&#39;t my choice.\&quot;&quot;|5-1a.marr]]&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;&lt;&lt;if $letter&gt;&gt;&lt;&lt;if $fivea.lett&gt;&gt;&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;Your letter didn&#39;t make a good first impression.\&quot;&quot;|5-1a.lett]]&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $box&gt;&gt;&lt;&lt;if $fivea.robe&gt;&gt;&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;I&#39;m sorry I didn&#39;t wear the robe.\&quot;&quot;|5-1a.robe]]&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if not $letter&gt;&gt;&lt;&lt;if $fivea.gift&gt;&gt;&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;I&#39;m sorry I didn&#39;t open your gift.\&quot;&quot;|5-1a.gift]]&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;&lt;&lt;if $letter&gt;&gt;&lt;&lt;if not $fivea.lett&gt;&gt;&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;Your letter didn&#39;t make a good first impression.\&quot;&quot;|5-1a.lett]]&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $box&gt;&gt;&lt;&lt;if not $fivea.robe&gt;&gt;&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;I&#39;m sorry I didn&#39;t wear the robe.\&quot;&quot;|5-1a.robe]]&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if not $letter&gt;&gt;&lt;&lt;if not $fivea.gift&gt;&gt;&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;I&#39;m sorry I didn&#39;t open your gift.\&quot;&quot;|5-1a.gift]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $fivea.count&gt;0&gt;&gt;&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;That&#39;s all.\&quot;&quot;|5-1a.done]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="202" name="5-1noq" tags="draft" position="3200,1075" size="100,100">Hawk scrutinizes you. &quot;Very well.&quot;&lt;&lt;if not $fivea.start&amp;&amp;not $fiveq.start&gt;&gt; $ha.They sit&lt;&lt;hs&gt;&gt; down on a loveseat, crossing one leg over the other and lounging back against the cushions. You feel $ha.their attention settle intently on you.&lt;&lt;/if&gt;&gt; &lt;&lt;include [[5-1haq]]&gt;&gt;
 
@@ -2342,7 +2344,7 @@ Having your departure moved up by several hours speeds your move toward the next
 
 &lt;&lt;include [[6-1.hSPLIT]]&gt;&gt;</tw-passagedata><tw-passagedata pid="294" name="6-2sa-h-2" tags="draft genderstuff" position="4950,1075" size="100,100">Now that you and Sabine have some degree of privacy, she steps closer to you and speaks quietly. &quot;Are you alright? &lt;&lt;if $ax.they==&quot;she&quot;&gt;&gt;He&lt;&lt;else&gt;&gt;She&lt;&lt;/if&gt;&gt; didn&#39;t try anything? No curses so far?&quot;
 
-&quot;&lt;&lt;if &lt;&lt;if ($ax.they==&quot;she&quot;&amp;&amp;$ha.they!=&quot;he&quot;)||($ax.they==&quot;he&quot;&amp;&amp;$ha.they!=&quot;she&quot;)&gt;&gt;&lt;i&gt;$ha.They&lt;/i&gt;. $ha.They didn&#39;t try anything.&quot;
+&quot;&lt;&lt;if ($ax.they==&quot;she&quot;&amp;&amp;$ha.they!=&quot;he&quot;)||($ax.they==&quot;he&quot;&amp;&amp;$ha.they!=&quot;she&quot;)&gt;&gt;&lt;i&gt;$ha.They&lt;/i&gt;. $ha.They didn&#39;t try anything.&quot;
 
 &quot;Oh. Interesting...&quot; Hawk seems to have unintentionally won a couple points with your sister. &quot;How did this marriage even happen then? Actually, never mind. Not important.&lt;&lt;else&gt;&gt;&quot;No, $ha.they didn&#39;t try anything.&quot;
 
@@ -2350,8 +2352,7 @@ Having your departure moved up by several hours speeds your move toward the next
 
 &lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;That was always a possibility anyhow.\&quot;&quot;|6-2sa-h-2.1]]&lt;/div&gt;
 &lt;&lt;if $pastduty&lt;-1&gt;&gt;&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;Better you than me.\&quot;&quot;|6-2sa-h-2.2]]&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;You&#39;ll be fine.\&quot;&quot;|6-2sa-h-2.3]]&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;You&#39;ll be fine.\&quot;&quot;|6-2sa-h-2.3]]&lt;/div&gt;
 &lt;div class=&quot;choice&quot;&gt;[[Just laugh.|6-2sa-h-2.4]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="295" name="6-2sa-h-2.1" tags="draft" position="4800,1200" size="100,100">&quot;That was always a possibility anyhow.&quot;
 
 She sighs melodramatically. &quot;You&#39;re right. It&#39;s inevitable. &lt;&lt;include [[6-2sa-h-3]]&gt;&gt;</tw-passagedata><tw-passagedata pid="296" name="6-2sa-h-2.2" tags="draft" position="4900,1200" size="100,100">&quot;Better you than me.&quot;
