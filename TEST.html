@@ -683,7 +683,7 @@ gift:false,
 }&gt;&gt;
 
 &lt;&lt;set $sixtalk={
-counter:0,
+count:0,
 isla:false,
 sab:false,
 mom:false,
@@ -955,13 +955,13 @@ You pull your hand back. &quot;They just gave it to you?&quot;
 
 &lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;Doesn&#39;t this seem suspicious? An Elf with a mysterious weapon looking to marry a human?\&quot;&quot;|1-8.2.1]]&lt;/div&gt;
 &lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;This is a death sentence.\&quot;&quot;|1-8.2.2]]&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;There must be another way.\&quot;&quot;|1-8.2.3]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="1-8.2.1" tags="draft" position="575,2100" size="100,100">&lt;&lt;$logical+=1&gt;&gt;&quot;Doesn&#39;t this seem suspicious?&quot; you ask. &quot;An Elf with a mysterious weapon looking to marry a human?&quot;
+&lt;div class=&quot;choice&quot;&gt;[[&quot;\&quot;There must be another way.\&quot;&quot;|1-8.2.3]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="1-8.2.1" tags="draft" position="575,2100" size="100,100">&lt;&lt;set $logical+=1&gt;&gt;&quot;Doesn&#39;t this seem suspicious?&quot; you ask. &quot;An Elf with a mysterious weapon looking to marry a human?&quot;
 
 &quot;I thought the same, but apparently, this interest goes back... quite some time. It came from the Elf&#39;s enclave, not to us but to the Crown. The intent was to tie the Elves who live in the kingdom more closely to us--humans. It did not specific which Elf would marry which human. There were no stipulations at all.&quot; There was, apparently, enough understanding of human society to know a marriage could bind two groups together but not enough to know that allowing the Crown to sit on it indefinitely could be dangerous. &quot;The King&#39;s ambassador was able to settle the enclave on the correct Elf, and you were the Crown&#39;s selection for our end of the marriage.&quot; You, born to a titled family but not titled enough to be costly, with a father and soon a brother in the army to provide incentive.
 
 Seeing the cold machinations behind this arrangement is almost comforting somehow.
 
-Your mother continues: &quot;&lt;&lt;include [[1-9]]&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="1-8.2.2" tags="draft" position="675,2100" size="100,100">&lt;&lt;$logical-=1&gt;&gt;&quot;This is a death sentence,&quot; you say, feeling both too hot and too cold at the same time. &quot;I &lt;&lt;if $confidence&gt;=0&gt;&gt;won&#39;t&lt;&lt;else&gt;&gt;can&#39;t&lt;&lt;/if&gt;&gt; do this.&quot;
+Your mother continues: &quot;&lt;&lt;include [[1-9]]&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="1-8.2.2" tags="draft" position="675,2100" size="100,100">&lt;&lt;set $logical-=1&gt;&gt;&quot;This is a death sentence,&quot; you say, feeling both too hot and too cold at the same time. &quot;I &lt;&lt;if $confidence&gt;=0&gt;&gt;won&#39;t&lt;&lt;else&gt;&gt;can&#39;t&lt;&lt;/if&gt;&gt; do this.&quot;
 
 &quot;Royal Intelligence believes this is a safe course of action. They investigated this sorcerer&#39;s reputation, and they found neither locals in the area who had alarming experiences nor records of any concerning activities.&quot;
 
@@ -2352,7 +2352,7 @@ Isla gives you a sad smile. &quot;Still, I&#39;ll do what I can in the remaining
 
 &quot;Enjoy the rest of the feast!&quot; she says, returning her seat as you and Hawk head back toward yours.
 
-&lt;&lt;include [[6-3h-accSPLIT]]&gt;&gt;</tw-passagedata><tw-passagedata pid="283" name="6-3h-accSPLIT" tags="draft codeonly" position="4925,1975" size="100,100">&lt;&lt;switch $sixtalk.count&gt;&gt;&lt;&lt;case 1&gt;&gt;&lt;&lt;include [[6-3hacc1]]&gt;&gt;&lt;&lt;case 2&gt;&gt;&lt;&lt;include [[6-3hacc2]]&gt;&gt;&lt;&lt;case 3&gt;&gt;&lt;&lt;include [[6-3hacc3]]&gt;&gt;&lt;&lt;default&gt;&gt;this is an error!&lt;&lt;/switch&gt;&gt;</tw-passagedata><tw-passagedata pid="284" name="6-3hacc1" tags="draft" position="4600,2100" size="100,100">But before you can reach your destination, your aunt--your mother&#39;s sister--accosts you, placing a hand on your arm. &quot;What a lovely wedding, my dear, just lovely. I remember when you were just a little one running around at your cousins&#39; wedding.&quot; She lets go of your arm and makes to take Hawk&#39;s arm instead, but $ha.they dodge&lt;&lt;hs&gt;&gt; out of the way. After looking up at $ha.them, reality seems to set in that she is not, in fact, in the presence of a human. &quot;Yes, well. I suppose I should let you go. Delightful to see you, dear.&quot; She pats your arm one more time before hurrying away, looking a bit in shock.
+&lt;&lt;include [[6-3h-accSPLIT]]&gt;&gt;</tw-passagedata><tw-passagedata pid="283" name="6-3h-accSPLIT" tags="draft codeonly" position="4925,1975" size="100,100">&lt;&lt;if $sixtalk.count&lt;2&gt;&gt;&lt;&lt;include [[6-3hacc1]]&gt;&gt;&lt;&lt;elseif $sixtalk.count&lt;3&gt;&gt;&lt;&lt;include [[6-3hacc2]]&gt;&gt;&lt;&lt;elseif $sixtalk.count&gt;=3&gt;&gt;&lt;&lt;include [[6-3hacc3]]&gt;&gt;&lt;&lt;else&gt;&gt;this is an error!&lt;&lt;/switch&gt;&gt;</tw-passagedata><tw-passagedata pid="284" name="6-3hacc1" tags="draft" position="4600,2100" size="100,100">But before you can reach your destination, your aunt--your mother&#39;s sister--accosts you, placing a hand on your arm. &quot;What a lovely wedding, my dear, just lovely. I remember when you were just a little one running around at your cousins&#39; wedding.&quot; She lets go of your arm and makes to take Hawk&#39;s arm instead, but $ha.they dodge&lt;&lt;hs&gt;&gt; out of the way. After looking up at $ha.them, reality seems to set in that she is not, in fact, in the presence of a human. &quot;Yes, well. I suppose I should let you go. Delightful to see you, dear.&quot; She pats your arm one more time before hurrying away, looking a bit in shock.
 
 Hawk doesn&#39;t remark on the incident as you return to your seats and the next course is placed before you. Meat is a common main dish...
 
@@ -2739,7 +2739,9 @@ When you don&#39;t make any further moves toward the ash line,&lt;&lt;if not $an
 
 &quot;Thank you.&quot;
 
-$ha.They &lt;&lt;include [[7-2]]&gt;&gt;</tw-passagedata><tw-passagedata pid="371" name="7-2" tags="" position="6000,600" size="100,100">return&lt;&lt;hs&gt;&gt; $ha.their attention to the various things $ha.they&#39;&lt;&lt;hve&gt;&gt; pulled from $ha.their pockets. $ha.They spin&lt;&lt;hs&gt;&gt; slowly in place before stopping sharply as $ha.they face&lt;&lt;hs&gt;&gt; due west. Tearing the rosemary spring apart, $ha.they drop&lt;&lt;hs&gt;&gt; a few needles in each of the four directions and speak quietly in a language you don&#39;t recognize. The words are strange and guttural in a way you don&#39;t think your human voice could imitate, and a sense of unease settles over you until $ha.they go&lt;&lt;hes&gt;&gt; quiet again.
+$ha.They &lt;&lt;include [[7-2]]&gt;&gt;</tw-passagedata><tw-passagedata pid="371" name="7-2" tags="" position="6000,600" size="100,100">return&lt;&lt;hs&gt;&gt; $ha.their attention to the various things $ha.they&#39;&lt;&lt;hve&gt;&gt; pulled from $ha.their pockets. $ha.They spin&lt;&lt;hs&gt;&gt; slowly in place before stopping sharply as $ha.they face&lt;&lt;hs&gt;&gt; due west. Tearing the rosemary spring apart, $ha.they drop&lt;&lt;hs&gt;&gt; a few needles in each of the four directions and speak quietly in a language you don&#39;t recognize. The words are strange and guttural in a way you don&#39;t think your human voice could replicate, and a sense of unease settles over you until $ha.they go&lt;&lt;hes&gt;&gt; quiet again.
+
+As the eerie sensation fades, Hawk plucks the feather from your grasp and splits it down the middle with a small knife. &quot;This will be easier if you refrain from thinking too much until we arrive. We&#39;ll be between places for longer this time--a few minutes. I suggest you keep your eyes closed.&quot;
 
 &lt;div class=&quot;choice&quot;&gt;[[Next|done]]&lt;/div&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
