@@ -100,20 +100,21 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 	</div>
 	<tw-storydata name="tsate" startnode="32" creator="Twine" creator-version="2.6.1" format="SugarCube" format-version="2.36.1" ifid="a98162b6-238a-4851-829a-b96266feb1ef" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.cdnfonts.com/css/open-dyslexic');
 
 :root {
   /* (default) light mode */
-  --bg: #fff;
+  --bg: #e8e5ee;
   --text: #000;
   --link: #1a1a1a;
   --accent: #f0e6e6;
-  --accent2: #d5d5d5;
+  --accent2: #d2cdde;
   /* dark mode */
   --dm-bg: #000;
   --dm-text: #fff;
   --dm-link: #fff;
-  --dm-accent: #1a1a1a;
-  --dm-accent2: #111111;
+  --dm-accent: #262635;
+  --dm-accent2: #1d1a22;
 }
   
 /* body */
@@ -129,6 +130,9 @@ body {
 }
 .sanserif body {
   font-family: 'Montserrat', sans-serif;
+}
+.opendys body {
+  font-family: 'Open-Dyslexic', sans-serif;
 }
 
 /* passages */
@@ -193,7 +197,7 @@ a:hover {
 #ui-bar {
   background-color: var(--accent);
   color: var(--text);
-  background-image: url('https://images.unsplash.com/photo-1600451996156-4a15bed058ba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80');
+  background-image: url('https://images.unsplash.com/photo-1465799522714-8eb0e6fccf73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1913&q=80');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -201,7 +205,7 @@ a:hover {
 .dm #ui-bar {
   background-color: var(--dm-accent);
   color: var(--dm-text);
-  background-image: url('https://images.unsplash.com/photo-1483982258113-b72862e6cff6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-image: url('https://images.unsplash.com/photo-1583459094467-e0db130c0dea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');
 }
 
 /* ui bar information - story title, author name, subtitle */
@@ -501,10 +505,10 @@ Setting.addList("theme", {
 //end change theme
 
 // change font
-var settingFontFamily = ["EB Garamond", "Montserrat"];
+var settingFontFamily = ["EB Garamond", "Montserrat", "Open Dyslexic"];
 var fontFamily = function() {
 	var $html = $("html");
-		$html.removeClass("sanserif");
+		$html.removeClass("sanserif opendys");
 	switch (settings.fontFamily) {
 		case "EB Garamond":
 			break;
@@ -512,6 +516,11 @@ var fontFamily = function() {
 	switch (settings.fontFamily) {
 		case "Montserrat":
 			$html.addClass("sanserif");
+			break;
+	}
+	switch (settings.fontFamily) {
+		case "Open Dyslexic":
+			$html.addClass("opendys");
 			break;
 	}
 };
@@ -2880,7 +2889,7 @@ Your heart pounds in your chest, and the room suddenly feels very small and frag
 
 Eventually, the fear drains away, and you&#39;re left with only the weight of exhaustion that slows your thoughts and pulls you back and forth between sleeping and waking. It&#39;s no use. You&#39;ve endured too much today to ask your body for any more. Finally, you give in and lie down, hoping you&#39;ll make it until morning.
 
-&lt;b&gt;&lt;div class=&quot;choice&quot;&gt;[[End of demo|7-demoend]]&lt;/div&gt;&lt;/b&gt;</tw-passagedata><tw-passagedata pid="393" name="7-demoend" tags="" position="6000,2500" size="100,100">&lt;&lt;if $testing&gt;&gt;DEMO&#39;S OVER&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="394" name="7-13.3-2" tags="draft" position="6050,2250" size="100,100">Clutching the lantern tightly, instinct takes over as you race down the hall. You hear the creature&#39;s claws scrape against the floor as it skids along the curving path behind you. It slams into the walls, briefly slowing it down each time before it quickly regains speed.
+&lt;b&gt;&lt;div class=&quot;choice&quot;&gt;[[End of demo|7-demoend]]&lt;/div&gt;&lt;/b&gt;</tw-passagedata><tw-passagedata pid="393" name="7-demoend" tags="draft todo" position="6000,2500" size="100,100">&lt;&lt;if $testing&gt;&gt;DEMO&#39;S OVER&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="394" name="7-13.3-2" tags="draft" position="6050,2250" size="100,100">Clutching the lantern tightly, instinct takes over as you race down the hall. You hear the creature&#39;s claws scrape against the floor as it skids along the curving path behind you. It slams into the walls, briefly slowing it down each time before it quickly regains speed.
 
 You reach what you hope is the series of doors that includes yours and frantically rattle each locked knob, praying that you didn&#39;t already pass yours. The beast is close enough that you can hear its heavy breaths and the saliva flying from its jaws.
 
